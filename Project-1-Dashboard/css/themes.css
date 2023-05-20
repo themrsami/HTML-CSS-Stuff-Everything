@@ -1,0 +1,61 @@
+/* Dark Theme Colors */
+[data-theme="dark"] {
+    --primary-color: #4895ef;
+    --secondary-color: #3f37c9;
+    --accent-color: #4cc9f0;
+    --background-color: #1a1b1e;
+    --surface-color: #2b2d31;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --border-color: #3f3f46;
+    --success-color: #4ade80;
+    --warning-color: #fbbf24;
+    --error-color: #f87171;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
+    transition: all var(--transition-speed) ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--background-color);
+}
+
+/* Dark Theme Specific Styles */
+[data-theme="dark"] .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sidebar {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme Transition Effects */
+.theme-transition {
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease,
+                border-color var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+}
+
+/* Theme Icons */
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    width: 20px;
+    height: 20px;
+}
+
+[data-theme="dark"] .sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .moon-icon {
+    display: none;
+}
