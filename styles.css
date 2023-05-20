@@ -1,0 +1,551 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Button 1: Rounded Corners */
+.btn-1 {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 12px;
+}
+.btn-1:hover {
+    background-color: #45a049;
+}
+
+/* Button 2: Outline */
+.btn-2 {
+    background-color: transparent;
+    color: #008CBA;
+    border: 2px solid #008CBA;
+}
+.btn-2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* Button 3: Shadow */
+.btn-3 {
+    background-color: #f44336;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn-3:hover {
+    background-color: #da190b;
+}
+
+/* Button 4: Gradient */
+.btn-4 {
+    background: linear-gradient(45deg, #e7e7e7, #ddd);
+    color: black;
+}
+.btn-4:hover {
+    background: linear-gradient(45deg, #ddd, #e7e7e7);
+}
+
+/* Button 5: Icon */
+.btn-5 {
+    background-color: #555555;
+    color: white;
+    position: relative;
+    padding-left: 40px;
+}
+.btn-5::before {
+    content: '★';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-5:hover {
+    background-color: #333;
+}
+
+/* Button 6: Rounded */
+.btn-6 {
+    background-color: #ff9800;
+    color: white;
+    border-radius: 50px;
+}
+.btn-6:hover {
+    background-color: #e68a00;
+}
+
+/* Button 7: 3D Effect */
+.btn-7 {
+    background-color: #9c27b0;
+    color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(0);
+}
+.btn-7:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+/* Button 8: Text Only */
+.btn-8 {
+    background-color: transparent;
+    color: #00bcd4;
+    text-decoration: underline;
+}
+.btn-8:hover {
+    color: #0097a7;
+}
+
+/* Button 9: Skewed */
+.btn-9 {
+    background-color: #cddc39;
+    color: black;
+    transform: skewX(-20deg);
+}
+.btn-9:hover {
+    background-color: #c0ca33;
+}
+
+/* Button 10: Inset Shadow */
+.btn-10 {
+    background-color: #ff5722;
+    color: white;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn-10:hover {
+    background-color: #e64a19;
+}
+
+/* Button 11: Double Border */
+.btn-11 {
+    background-color: #673ab7;
+    color: white;
+    border: 2px solid #673ab7;
+    border-radius: 4px;
+    position: relative;
+}
+.btn-11::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid #673ab7;
+    border-radius: 4px;
+}
+.btn-11:hover {
+    background-color: #5e35b1;
+}
+
+/* Button 12: Neon */
+.btn-12 {
+    background-color: #000;
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+}
+.btn-12:hover {
+    background-color: #111;
+}
+
+/* Button 13: Flip */
+.btn-13 {
+    background-color: #ffeb3b;
+    color: black;
+    perspective: 1000px;
+}
+.btn-13:hover {
+    transform: rotateY(180deg);
+}
+
+/* Button 14: Ripple */
+.btn-14 {
+    background-color: #3f51b5;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+.btn-14::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+.btn-14:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Button 15: Cutout */
+.btn-15 {
+    background-color: #009688;
+    color: white;
+    position: relative;
+}
+.btn-15::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00796b;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%, 50% 0);
+    z-index: -1;
+}
+.btn-15:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Button 16: Border Slide */
+.btn-16 {
+    background-color: transparent;
+    color: #ff4081;
+    border: 2px solid #ff4081;
+    position: relative;
+    overflow: hidden;
+}
+.btn-16::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ff4081;
+    transition: left 0.3s ease;
+}
+.btn-16:hover::before {
+    left: 0;
+}
+.btn-16:hover {
+    color: white;
+}
+
+/* Button 17: Zigzag Border */
+.btn-17 {
+    background-color: #795548;
+    color: white;
+    border: 2px dashed white;
+    position: relative;
+}
+.btn-17::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px dashed white;
+    z-index: -1;
+}
+.btn-17:hover {
+    background-color: #6d4c41;
+}
+
+/* Button 18: Wave */
+.btn-18 {
+    background-color: #607d8b;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-18::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s ease;
+}
+.btn-18:hover::before {
+    transform: translate(50%, 50%);
+}
+
+/* Button 19: Diagonal */
+.btn-19 {
+    background-color: #ff5722;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-19::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: skewX(-45deg);
+    transition: transform 0.3s ease;
+}
+.btn-19:hover::before {
+    transform: skewX(0);
+}
+
+/* Button 20: Split */
+.btn-20 {
+    background-color: #3f51b5;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-20::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+.btn-20:hover::before {
+    transform: translateX(0);
+}
+
+/* Button 21: Slide Up */
+.btn-21 {
+    background-color: #ff9800;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-21::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+}
+.btn-21:hover::before {
+    top: 0;
+}
+
+/* Button 22: Slide Down */
+.btn-22 {
+    background-color: #4caf50;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-22::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+}
+.btn-22:hover::before {
+    top: 0;
+}
+
+/* Button 23: Slide Left */
+.btn-23 {
+    background-color: #2196f3;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-23::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+.btn-23:hover::before {
+    left: 0;
+}
+
+/* Button 24: Slide Right */
+.btn-24 {
+    background-color: #9c27b0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-24::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+.btn-24:hover::before {
+    left: 0;
+}
+
+/* Button 25: Pulse */
+.btn-25 {
+    background-color: #e91e63;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.btn-25::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+.btn-25:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+/* Button 26: Glow */
+.btn-26 {
+    background-color: #673ab7;
+    color: white;
+    box-shadow: 0 0 5px #673ab7, 0 0 10px #673ab7, 0 0 20px #673ab7;
+}
+.btn-26:hover {
+    box-shadow: 0 0 10px #673ab7, 0 0 20px #673ab7, 0 0 30px #673ab7;
+}
+
+/* Button 27: Border Fade */
+.btn-27 {
+    background-color: transparent;
+    color: #ff5722;
+    border: 2px solid #ff5722;
+    position: relative;
+    overflow: hidden;
+}
+.btn-27::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff5722;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+.btn-27:hover::before {
+    opacity: 1;
+}
+.btn-27:hover {
+    color: white;
+}
+
+/* Button 28: Border Grow */
+.btn-28 {
+    background-color: #009688;
+    color: white;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.btn-28::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #009688;
+    transition: transform 0.3s ease;
+    transform: scale(0);
+}
+.btn-28:hover::before {
+    transform: scale(1);
+}
+
+/* Button 29: Border Shrink */
+.btn-29 {
+    background-color: #ff9800;
+    color: white;
+    border: 2px solid #ff9800;
+    position: relative;
+    overflow: hidden;
+}
+.btn-29::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+.btn-29:hover::before {
+    transform: scale(0);
+}
+
+/* Button 30: Border Rotate */
+.btn-30 {
+    background-color: #3f51b5;
+    color: white;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.btn-30::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3f51b5;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+.btn-30:hover::before {
+    transform: rotate(360deg);
+}
