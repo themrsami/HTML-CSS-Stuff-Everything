@@ -1,0 +1,151 @@
+.text-style-1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-style-2 {
+    font-style: italic;
+    text-decoration: underline;
+    word-spacing: 5px;
+}
+
+.text-style-3 {
+    text-shadow: 2px 2px 4px #000000;
+    font-variant: small-caps;
+}
+
+.text-style-4 {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.text-style-5 {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: lowercase;
+}
+
+.text-style-6 {
+    letter-spacing: -1px;
+    font-weight: 300;
+}
+
+.text-style-7 {
+    text-decoration: line-through;
+    font-style: oblique;
+}
+
+.text-style-8 {
+    word-spacing: 10px;
+    font-variant: all-small-caps;
+}
+
+.text-style-9 {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.text-style-10 {
+    text-indent: 50px;
+    line-height: 2;
+}
+
+.text-style-11 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: none;
+}
+
+.text-style-12 {
+    letter-spacing: 3px;
+    font-style: normal;
+}
+
+.text-style-13 {
+    text-decoration: overline;
+    font-weight: 200;
+}
+
+.text-style-14 {
+    word-spacing: 15px;
+    font-variant: normal;
+}
+
+.text-style-15 {
+    text-transform: full-width;
+    font-weight: 500;
+}
+
+.text-style-16 {
+    text-shadow: 1px 1px 2px #FF0000;
+    font-style: italic;
+}
+
+.text-style-17 {
+    line-height: 1.2;
+    text-align: center;
+}
+
+.text-style-18 {
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+.text-style-19 {
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.text-style-20 {
+    text-decoration: blink;
+    font-style: oblique;
+}
+
+.text-style-21 {
+    word-spacing: 20px;
+    font-variant: small-caps;
+}
+
+.text-style-22 {
+    text-transform: lowercase;
+    font-weight: 100;
+}
+
+.text-style-23 {
+    text-indent: 30px;
+    line-height: 1.8;
+}
+
+.text-style-24 {
+    font-family: 'Georgia', serif;
+    text-transform: capitalize;
+}
+
+.text-style-25 {
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.text-style-26 {
+    text-decoration: underline overline;
+    font-weight: 400;
+}
+
+.text-style-27 {
+    word-spacing: 25px;
+    font-variant: all-small-caps;
+}
+
+.text-style-28 {
+    text-transform: none;
+    font-weight: 600;
+}
+
+.text-style-29 {
+    text-shadow: 3px 3px 5px #00FF00;
+    font-style: italic;
+}
+
+.text-style-30 {
+    line-height: 1.1;
+    text-align: right;
+}
