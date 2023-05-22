@@ -1,0 +1,171 @@
+/* Mobile First Approach */
+
+/* Base styles are for mobile */
+
+/* Tablet (481px and up) */
+@media screen and (min-width: 481px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop (769px and up) */
+@media screen and (min-width: 769px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        padding: var(--spacing-md) 0;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: var(--spacing-lg);
+    }
+
+    .hero-content {
+        max-width: 70%;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .contact-form .form-group:last-child {
+        grid-column: span 2;
+    }
+}
+
+/* Desktop (1025px and up) */
+@media screen and (min-width: 1025px) {
+    .container {
+        width: 85%;
+        max-width: 1400px;
+    }
+
+    .hero-content {
+        max-width: 60%;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: var(--surface-color);
+        padding: var(--spacing-xl) var(--spacing-lg);
+        flex-direction: column;
+        transition: right var(--transition-normal);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .mobile-menu-toggle:focus {
+        outline: none;
+    }
+}
+
+/* Custom Cursor Hide on Mobile */
+@media (hover: none) and (pointer: coarse) {
+    .cursor,
+    .cursor-dot {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .theme-toggle,
+    .mobile-menu-toggle,
+    .nav-menu,
+    .contact-form,
+    .social-links {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .project-card,
+    .skills-container {
+        break-inside: avoid;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
