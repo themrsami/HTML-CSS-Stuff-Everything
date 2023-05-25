@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fab fa-apple"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active" title="Dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" title="Products">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Products</span>
+                </a>
+                <a href="#" title="Sales">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Sales</span>
+                </a>
+                <a href="#" title="Customers">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+                <a href="#" title="Settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+            <div class="user-profile">
+                <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36" alt="Profile">
+                <div class="user-info">
+                    <h4>Admin User</h4>
+                    <p>Administrator</p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="top-nav">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <section class="overview-section">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Revenue</h3>
+                            <p class="stat-value">$2.4M</p>
+                            <span class="trend positive">+12.5%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Sales</h3>
+                            <p class="stat-value">8,549</p>
+                            <span class="trend positive">+8.2%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Customers</h3>
+                            <p class="stat-value">95.8K</p>
+                            <span class="trend positive">+5.7%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Products</h3>
+                            <p class="stat-value">1,423</p>
+                            <span class="trend positive">+3.2%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h3>Revenue Analytics</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Product Performance</h3>
+                    <canvas id="productChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h3>Top Products</h3>
+                    <button class="view-all">View All</button>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e" alt="iPhone 14 Pro">
+                        <div class="product-info">
+                            <h4>iPhone 14 Pro</h4>
+                            <p class="price">$999</p>
+                            <div class="product-stats">
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span><i class="fas fa-shopping-cart"></i> 12.5K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="MacBook Pro">
+                        <div class="product-info">
+                            <h4>MacBook Pro</h4>
+                            <p class="price">$1,999</p>
+                            <div class="product-stats">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-shopping-cart"></i> 8.2K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0" alt="iPad Pro">
+                        <div class="product-info">
+                            <h4>iPad Pro</h4>
+                            <p class="price">$799</p>
+                            <div class="product-stats">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-shopping-cart"></i> 6.4K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activities -->
+            <section class="activities-section">
+                <div class="section-header">
+                    <h3>Recent Activities</h3>
+                    <button class="view-all">View All</button>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>New Order #12345</h4>
+                            <p>iPhone 14 Pro - Space Black</p>
+                            <span class="activity-time">2 minutes ago</span>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status processing">Processing</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>New Customer</h4>
+                            <p>John Doe joined</p>
+                            <span class="activity-time">15 minutes ago</span>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Product Update</h4>
+                            <p>MacBook Pro stock updated</p>
+                            <span class="activity-time">1 hour ago</span>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
