@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Centered Rounded Navbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Logo" class="nike-logo">
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="#"><i class="fas fa-shopping-bag"></i> Products</a>
+                    <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </div>
+                <div class="user-profile">
+                    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36" alt="Profile" class="profile-img">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Stats Cards -->
+            <section class="stats-section">
+                <div class="glass-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Revenue</h3>
+                    <p class="stat">$124,563</p>
+                    <span class="trend positive">+12.5%</span>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Sales</h3>
+                    <p class="stat">1,243</p>
+                    <span class="trend positive">+8.3%</span>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Customers</h3>
+                    <p class="stat">45,623</p>
+                    <span class="trend positive">+5.7%</span>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section class="products-section">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <div class="product-card glass-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Shoe">
+                        <div class="product-info">
+                            <h3>Nike Air Max 2023</h3>
+                            <p class="price">$199.99</p>
+                            <div class="product-stats">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-shopping-cart"></i> 1.2k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card glass-card">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" alt="Nike Shoe">
+                        <div class="product-info">
+                            <h3>Nike Zoom Pro</h3>
+                            <p class="price">$179.99</p>
+                            <div class="product-stats">
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span><i class="fas fa-shopping-cart"></i> 956</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card glass-card">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Nike Shoe">
+                        <div class="product-info">
+                            <h3>Nike Air Jordan</h3>
+                            <p class="price">$229.99</p>
+                            <div class="product-stats">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span><i class="fas fa-shopping-cart"></i> 2.1k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sales Chart -->
+            <section class="chart-section glass-card">
+                <h2>Sales Analytics</h2>
+                <div class="chart-container">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Recent Orders -->
+            <section class="orders-section glass-card">
+                <h2>Recent Orders</h2>
+                <div class="orders-table">
+                    <div class="order-item">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Product">
+                        <div class="order-info">
+                            <h4>Nike Air Max 2023</h4>
+                            <p>Order #12345</p>
+                        </div>
+                        <div class="order-status">
+                            <span class="status delivered">Delivered</span>
+                            <p class="order-price">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="order-item">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" alt="Product">
+                        <div class="order-info">
+                            <h4>Nike Zoom Pro</h4>
+                            <p>Order #12344</p>
+                        </div>
+                        <div class="order-status">
+                            <span class="status processing">Processing</span>
+                            <p class="order-price">$179.99</p>
+                        </div>
+                    </div>
+                    <div class="order-item">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Product">
+                        <div class="order-info">
+                            <h4>Nike Air Jordan</h4>
+                            <p>Order #12343</p>
+                        </div>
+                        <div class="order-status">
+                            <span class="status shipped">Shipped</span>
+                            <p class="order-price">$229.99</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
