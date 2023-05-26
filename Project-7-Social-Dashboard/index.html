@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>SocialDash</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-chart-bar"></i> Analytics</li>
+                <li><i class="fas fa-users"></i> Followers</li>
+                <li><i class="fas fa-comment"></i> Messages</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+            <div class="profile">
+                <img src="https://via.placeholder.com/40" alt="Profile">
+                <span>John Doe</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Dashboard Overview</h1>
+                <div class="date">Today: <span id="current-date"></span></div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fab fa-twitter"></i>
+                    <h3>Twitter</h3>
+                    <p class="number">12.5K</p>
+                    <p class="label">Followers</p>
+                    <span class="trend positive">+2.4%</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p class="number">24.8K</p>
+                    <p class="label">Followers</p>
+                    <span class="trend positive">+5.3%</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fab fa-facebook"></i>
+                    <h3>Facebook</h3>
+                    <p class="number">18.2K</p>
+                    <p class="label">Followers</p>
+                    <span class="trend positive">+1.8%</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p class="number">8.9K</p>
+                    <p class="label">Connections</p>
+                    <span class="trend positive">+3.1%</span>
+                </div>
+            </div>
+
+            <!-- Engagement Chart -->
+            <div class="chart-container">
+                <h2>Engagement Overview</h2>
+                <canvas id="engagementChart"></canvas>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <i class="fas fa-heart"></i>
+                        <div class="activity-content">
+                            <p>New like on your post</p>
+                            <span>2 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-comment"></i>
+                        <div class="activity-content">
+                            <p>New comment on your photo</p>
+                            <span>15 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-user-plus"></i>
+                        <div class="activity-content">
+                            <p>New follower</p>
+                            <span>1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
