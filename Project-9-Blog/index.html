@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify | Modern Blog Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-switch" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <nav>
+            <div class="logo">Blog<span>ify</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search articles...">
+                <i class="fas fa-search"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="cta-button">Subscribe</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Stories That Matter</h1>
+            <div class="categories">
+                <button class="category-tag active">All</button>
+                <button class="category-tag">Technology</button>
+                <button class="category-tag">Design</button>
+                <button class="category-tag">Development</button>
+                <button class="category-tag">Business</button>
+            </div>
+        </section>
+
+        <section class="featured-posts">
+            <div class="post-grid">
+                <article class="post-card featured">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Featured Post">
+                        <span class="reading-time">5 min read</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="category">Technology</span>
+                        <h2>The Future of Web Development</h2>
+                        <p>Explore the latest trends and technologies shaping the future of web development...</p>
+                        <div class="post-meta">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Author">
+                            <div>
+                                <strong>John Doe</strong>
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- More post cards here... -->
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay in the Loop</h2>
+                <p>Get the latest articles and insights straight to your inbox.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="newsletter-decoration">
+                <div class="floating-circle"></div>
+                <div class="floating-circle"></div>
+                <div class="floating-circle"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Blogify</h3>
+                <p>Discover stories, thinking, and expertise from writers on any topic.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Blogify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
